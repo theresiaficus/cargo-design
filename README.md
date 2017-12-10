@@ -1,7 +1,7 @@
 # Theresia Anna Ficus Cargo Website Design
 This is a personal project that leverages the customization capabilities of cargocollective.com for developers.
 
-The site [theresiaannaficus.com](http://theresiaannaficus.com/) used these files in order to provide a more tuned and accurate design.
+The site [theresiaannaficus.com](http://theresiaannaficus.com/) uses these files in order to provide a more tuned and accurate design.
 
 ## Documentation on Cargo Developer Tools
 
