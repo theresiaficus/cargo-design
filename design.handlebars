@@ -53,13 +53,11 @@
           <a class="th-dropdown-btn nav-link text-center">
             <span class="align-middle">Projects</span>
           </a>
-
           <div class="th-dropdown-content" data-set="Projects">
             {{#projects}}
             <a class="th-dropdown-item" href="{{ url }}">{{ title }}</a>
             {{/projects}}
           </div>
-
         </li>
         <li class="nav-item col-sm-2">
           <a class="nav-link text-center" href="#" data-url-id="7008459">
@@ -219,8 +217,8 @@
       </div>
 
     </div>
-
-    <div id="thumbnails" class="thumbnails clear" data-view="Thumbnail" data-set="Projects">
+  </div>
+    <!--div id="thumbnails" class="thumbnails clear" data-view="Thumbnail" data-set="Projects">
 
       {{#projects}} {{#if_option "use_sets"}} {{#if set_start }}
       <div class="set_thumbs_wrapper" data-setid="{{ set_id }}">
@@ -277,7 +275,7 @@
     <div id="autopaginate_loader" class="moreload" data-view="Autopaginate" data-preload_distance="500">
       {{> loading_animation}}
     </div>
-  </div>
+  </div-->
 
   <!--
   {{/route}} {{#route search "/search"}}
