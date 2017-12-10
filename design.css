@@ -76,6 +76,9 @@ footer {
   min-height: 40px;
   border-top: 5px double #000;
 }
+footer #impressum {
+  color: #000;
+}
 
 /**
  * Polaris
