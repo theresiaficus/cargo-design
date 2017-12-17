@@ -27,7 +27,7 @@ $(function() {
   }
 
   /***Navigation Patches***/
-  $('#header-image').click(function(event) {
+  $('.header-image').click(function(event) {
     event.preventDefault();
     window.location.reload();
   });

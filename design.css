@@ -56,27 +56,30 @@ nav {
 .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
-#th-navbar-collapse {
+.navbar-desktop {
   min-height: var(--header-height);
-}
-#header-image a {
-  display: block;
-}
-#header-image img {
-  max-height: var(--header-height);
-  margin-right: 30px;
-  padding: 10px 0;
-}
-#th-navbar-collapse li a {
-  color: #000;
-  cursor: pointer;
-}
-#th-navbar-collapse li a:not(.th-dropdown-item) {
-  min-height: var(--header-height);
-  line-height: 50px;
 }
 ul.navbar-nav {
   width: 100%;
+}
+.navbar-desktop ul {
+  margin-left: 0;
+}
+.navbar-desktop li a {
+  color: #000;
+  cursor: pointer;
+}
+.navbar-desktop li a:not(.th-dropdown-item) {
+  min-height: var(--header-height);
+  line-height: 50px;
+}
+.header-image a {
+  display: block;
+}
+.header-image img {
+  max-height: var(--header-height);
+  margin-right: 30px;
+  padding: 10px 0;
 }
 
 /* Header Dropdown*/
@@ -138,33 +141,43 @@ main {
   background-position-y: calc(var(--header-height) + var(--double-border-width));
 }
 #cover1 {
-  background-image: url("{{#asset}}slide1_superman.jpg{{/asset}}");
+  background-image: url("{{#asset}}_01-moi-min.jpg{{/asset}}");
 }
 #cover2 {
-  background-image: url("{{#asset}}slide2_batman.jpg{{/asset}}");
+  background-image: url("{{#asset}}_02-werk-ohne-autor-min.jpg{{/asset}}");
 }
 #cover3 {
-  background-image: url("{{#asset}}slide3_green_lantern.jpg{{/asset}}");
+  background-image: url("{{#asset}}_03-tatort-min.jpg{{/asset}}");
 }
 #cover4 {
-  background-image: url("{{#asset}}slide4_flash.jpg{{/asset}}");
+  background-image: url("{{#asset}}_04-goster-min.jpg{{/asset}}");
   margin-bottom: var(--footer-height);
 }
 .cover h2 {
   position: fixed;
   top: 50%;
   height: 100px;
-  line-height: 100px;
+  line-height: 65px;
   margin-top: -50px;
   padding-left: 10%;
-  font-size: 100px;
+  font-size: 65px;
   font-weight: bold;
-  color: white;
   text-shadow: 3px 3px 3px #000;
 }
-
-#cover1 h2, #cover3 h2 {
+#home .cover:nth-child(1) h2 {
+  color: #fff;
+  top: 40%;
+  right: 5%;
+}
+#home .cover:nth-child(2) h2 {
+  color: #9F9B92;
+}
+#home .cover:nth-child(3) h2 {
+  color: #FBFCED;
   right: 10%;
+}
+#home .cover:nth-child(4) h2 {
+  color: #CFDE74;
 }
 
 /*Footer*/
