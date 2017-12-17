@@ -187,6 +187,11 @@ main {
   color: #CFDE74;
 }
 
+/*Content*/
+.container.th-content {
+    margin-top: 20px;
+}
+
 /*Footer*/
 footer {
   position: fixed;

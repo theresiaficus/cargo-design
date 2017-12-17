@@ -225,13 +225,11 @@
     </main>
   </div>
 
-  <div class="container-fluid">
-    <div id="project" class="project clear" data-view="ProjectDetail" data-set="Project" {{#if site.start_project_id}} style="display:block;"
-      {{/if}}>
-      <div class="entry" data-id="{{ project.id }}">
+    <div id="project" class="project clear" data-view="ProjectDetail" data-set="Project" {{#if site.start_project_id}} style="display:block;" {{/if}}>
+      {{!-- <div-- class="entry" data-id="{{ project.id }}">
         {{#if_option "title_in_project"}} {{#if project.show_title }}
         <div class="project_title">{{{ project.title }}}</div>
-        {{/if}} {{/if_option}}
+        {{/if}} {{/if_option}} --}}
 
         <!--div class="project_navigation {{ project.type }}">
           <a href="#" rel="prev_project">
@@ -247,12 +245,12 @@
 
         {{#if project.content}}
         <div class="project_content">
-          {{print "project.content"}}
+          <div class="container th-content">{{print "project.content"}}</div>
         </div>
         {{/if}}
 
-        <directlink link="{{ project.direct_link }}" id="dl_{{ project.id }}"></directlink>
-      </div>
+        <!--directlink link="{{ project.direct_link }}" id="dl_{{ project.id }}"></directlink>
+      </div-->
 
       <!--div class="project_footer">
         {{#if project.date}}
@@ -273,7 +271,7 @@
         {{/if}}
       </div-->
     </div>
-  </div>
+  
   <!--div id="thumbnails" class="thumbnails clear" data-view="Thumbnail" data-set="Projects">
 
       {{#projects}} {{#if_option "use_sets"}} {{#if set_start }}
