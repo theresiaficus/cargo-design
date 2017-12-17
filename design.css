@@ -299,6 +299,9 @@ main {
 .project_content {
   margin-bottom: var(--footer-height);
 }
+.container.th-content blockquote {
+  margin-bottom: 0;
+}
 .container.th-content .iframe-wrapper {
   width: 100%;
   margin: 25px 0;
