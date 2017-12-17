@@ -32,10 +32,56 @@
     {{>loading_animation}}
   </div>
 
-  <header class="site_header navbar navbar-expand-lg bg-header-footer">
-    <nav class="collapse navbar-collapse container-fluid" id="th-navbar-collapse">
+  <header class="site_header bg-header-footer">
+    <nav class="navbar navbar-toggleable-md navbar-light bg-faded hidden-sm-down navbar-mobile">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+        aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div id="header-image">
+        {{#if_option "header_link_to_index"}} {{#if_any route.search route.is_set}}
+        <a class="navbar-brand" href="{{ site.direct_link }}">
+          {{else}}
+          <a href="{{ site.direct_link }}" rel="show_index">
+            {{/if_any}} {{/if_option}}
+            <img src="{{ site.header_url }}" {{#if_option "header_link_to_index"}}>
+          </a>{{/if_option}}
+      </div>
+    
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mr-auto mt-2 mt-md-0">
+          <li class="nav-item">
+            <a class="nav-link text-center" href="#" data-url-id="6958383">
+              <span class="align-middle">About</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="th-dropdown-btn nav-link text-center">
+              <span class="align-middle">Projects</span>
+            </a>
+            <!--div class="th-dropdown-content" data-set="Projects">
+              {{#projects}}
+              <a class="th-dropdown-item" href="{{ url }}">{{ title }}</a>
+              {{/projects}}
+            </div -->
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-center" href="#" data-url-id="7008459">
+              <span class="align-middle">Visuals</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-center" href="#" data-url-id="6974618">
+              <span class="align-middle">Contact</span>
+            </a>
+          </li>
+      </div>
+    </nav>
+
+    <nav class="navbar navbar-toggleable-sm navbar-expand-sm collapse navbar-collapse container-fluid navbar-desktop" id="th-navbar-collapse">
       <ul class="navbar-nav row mr-auto">
-        <li class="header_image col-sm-1">
+        <li id="header-image" class="col-1">
           {{#if_option "header_link_to_index"}} {{#if_any route.search route.is_set}}
           <a href="{{ site.direct_link }}">
             {{else}}
@@ -44,12 +90,12 @@
               <img src="{{ site.header_url }}" {{#if_option "header_link_to_index"}}>
             </a>{{/if_option}}
         </li>
-        <li class="nav-item col-sm-2">
+        <li class="nav-item col-2">
           <a class="nav-link text-center" href="#" data-url-id="6958383">
             <span class="align-middle">About</span>
           </a>
         </li>
-        <li class="nav-item th-dropdown col-sm-2">
+        <li class="nav-item th-dropdown col-2">
           <a class="th-dropdown-btn nav-link text-center">
             <span class="align-middle">Projects</span>
           </a>
@@ -59,12 +105,12 @@
             {{/projects}}
           </div>
         </li>
-        <li class="nav-item col-sm-2">
+        <li class="nav-item col-2">
           <a class="nav-link text-center" href="#" data-url-id="7008459">
             <span class="align-middle">Visuals</span>
           </a>
         </li>
-        <li class="nav-item th-dropdown col-sm-2">
+        <li class="nav-item th-dropdown col-2">
           <a class="th-dropdown-btn nav-link text-center">
             <span class="align-middle">Links</span>
           </a>
@@ -80,7 +126,7 @@
             <a class="th-dropdown-item" href="https://theresiaannaficus.tumblr.com/" target="blank">tumblr</a>
           </div>
         </li>
-        <li class="nav-item col-sm-2">
+        <li class="nav-item col-2">
           <a class="nav-link text-center" href="#" data-url-id="6974618">
             <span class="align-middle">Contact</span>
           </a>
@@ -162,21 +208,32 @@
 
   {{/unless}} {{#route index "/"}}
   -->
+  <div id="home">
+    <main>
+      <section class="cover" id="cover1">
+        <h2 data-0="opacity: 1; -webkit-transform: scale(0.8,0.8);" data-_step50="opacity: 0; -webkit-transform: scale(1.4,1.4);">SUPERMAN</h2>
+      </section>
+      <section class="cover" id="cover2">
+        <h2 data-_step50="opacity: 0; -webkit-transform: scale(0.8,0.8);" data-_step65="opacity: 1; -webkit-transform: scale(1,1);" data-_step100="opacity: 1; -webkit-transform: scale(1.2,1.2);" data-_step150="opacity: 0; -webkit-transform: scale(1.4,1.4);">BATMAN</h2>
+      </section>
+      <section class="cover" id="cover3">
+        <h2 data-_step150="opacity: 0; -webkit-transform: scale(0.8,0.8);" data-_step165="opacity: 1; -webkit-transform: scale(1,1);" data-_step200="opacity: 1; -webkit-transform: scale(1.2,1.2);" data-_step250="opacity: 0; -webkit-transform: scale(1.4,1.4);">GREEN LANTERN</h2>
+      </section>
+      <section class="cover" id="cover4">
+        <h2 data-_step250="opacity: 0; -webkit-transform: scale(0.8,0.8);" data-_step300="opacity: 1; -webkit-transform: scale(1.1,1.1);">FLASH</h2>
+      </section>
+    </main>
+  </div>
 
-  <div class="container">
-
+  <div class="container-fluid">
     <div id="project" class="project clear" data-view="ProjectDetail" data-set="Project" {{#if site.start_project_id}} style="display:block;"
       {{/if}}>
-
       <div class="entry" data-id="{{ project.id }}">
-
         {{#if_option "title_in_project"}} {{#if project.show_title }}
-        <div class="project_title">
-          {{{ project.title }}}
-        </div>
+        <div class="project_title">{{{ project.title }}}</div>
         {{/if}} {{/if_option}}
 
-        <div class="project_navigation {{ project.type }}">
+        <!--div class="project_navigation {{ project.type }}">
           <a href="#" rel="prev_project">
             <img src="{{#asset}}arrow-up.svg{{/asset}}">
           </a>
@@ -186,17 +243,18 @@
           <a href="#" rel="next_project">
             <img src="{{#asset}}arrow-down.svg{{/asset}}">
           </a>
-        </div>
+        </div-->
 
+        {{#if project.content}}
         <div class="project_content">
           {{print "project.content"}}
         </div>
+        {{/if}}
 
         <directlink link="{{ project.direct_link }}" id="dl_{{ project.id }}"></directlink>
-
       </div>
 
-      <div class="project_footer">
+      <!--div class="project_footer">
         {{#if project.date}}
         <span class="date">
           {{ project.date }}
@@ -213,12 +271,10 @@
           <a href="{{ site.direct_link }}/admin/{{ project.id }}" target="_top">Edit</a>
         </span>
         {{/if}}
-
-      </div>
-
+      </div-->
     </div>
   </div>
-    <!--div id="thumbnails" class="thumbnails clear" data-view="Thumbnail" data-set="Projects">
+  <!--div id="thumbnails" class="thumbnails clear" data-view="Thumbnail" data-set="Projects">
 
       {{#projects}} {{#if_option "use_sets"}} {{#if set_start }}
       <div class="set_thumbs_wrapper" data-setid="{{ set_id }}">
@@ -320,10 +376,39 @@
   <footer class="container-fluid">
     <div class="row">
       <div class="col-12 text-center">
-        <span class="align-middle">Theresia Anna Ficus</span> - <a id="impressum"href="#" data-url-id="7027467"><span class="align-middle">Impressum</span></a>
+        <span class="align-middle">Theresia Anna Ficus</span> -
+        <a id="impressum" href="#" data-url-id="7027467">
+          <span class="align-middle">Impressum</span>
+        </a>
       </div>
     </div>
   </footer>
+
+  <script src="{{#asset}}bootstrap4alpha6.min.js{{/asset}}" type="text/javascript"></script>
+  <script src="{{#asset}}skrollr.min.js{{/asset}}" type="text/javascript"></script>
+  <script type="text/javascript">
+    const windowHeight = $(window).outerHeight(true);
+    const headerHeight = $('header').outerHeight(true);
+    const footerHeight = $('footer').outerHeight(true);
+    const homeHeight = windowHeight - headerHeight - footerHeight;
+    const homeHeight50p = homeHeight / 2;
+    const homeHeight25p = homeHeight / 4;
+    const homeHeight15p = (homeHeight / 20) * 3;
+    const step50 = homeHeight50p;
+    const step65 = homeHeight50p + homeHeight15p;
+    const step100 = homeHeight;
+    const step150 = homeHeight + homeHeight50p;
+    const step165 = step150 + homeHeight15p;
+    const step200 = homeHeight * 2;
+    const step250 = step200 + homeHeight50p;
+    const step300 = homeHeight * 3;
+
+    var s = skrollr.init({
+      // forceHeight: false,
+      constants: {step50, step65, step100, step150, step165, step200, step250, step300},
+    });
+    s.refresh($('.cover'));
+  </script>
 </body>
 
 </html>
