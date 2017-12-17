@@ -8,6 +8,12 @@ customhtml {
   display: none;
 }
 
+/*Fonts*/
+@font-face {
+    font-family: lane;
+    src: url("{{#asset}}lanear.ttf{{/asset}}");
+}
+
 /*CSS variables*/
 :root {
   --header-height: 70px;
@@ -20,6 +26,7 @@ customhtml {
 html, body {
   width: 100%;
   height: 100%;
+  font-family: lane;
 }
 
 /*Header*/
