@@ -42,6 +42,7 @@ $(function() {
       location.href = pageUrl;
     }
   });
+  $('.th-project-images img').addClass('img-thumbnail img-fluid');
 });	
 
 /**
