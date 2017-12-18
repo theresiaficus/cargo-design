@@ -33,55 +33,14 @@
   </div>
 
   <header class="site_header bg-header-footer">
-    <nav class="navbar navbar-toggleable-md navbar-light bg-faded hidden-sm-down navbar-mobile">
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
-        aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="header-image">
-        {{#if_option "header_link_to_index"}} {{#if_any route.search route.is_set}}
-        <a class="navbar-brand" href="{{ site.direct_link }}">
-          {{else}}
-          <a href="{{ site.direct_link }}" rel="show_index">
-            {{/if_any}} {{/if_option}}
-            <img src="{{ site.header_url }}" {{#if_option "header_link_to_index"}}>
-          </a>{{/if_option}}
-      </div>
-    
-      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-        <ul class="navbar-nav mr-auto mt-2 mt-md-0">
-          <li class="nav-item">
-            <a class="nav-link text-center" href="#" data-url-id="6958383">
-              <span class="align-middle">ABOUT</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="th-dropdown-btn nav-link text-center">
-              <span class="align-middle">PROJECTS</span>
-            </a>
-            <!--div class="th-dropdown-content" data-set="Projects">
-              {{#projects}}
-              <a class="th-dropdown-item" href="{{ url }}">{{ title }}</a>
-              {{/projects}}
-            </div -->
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-center" href="#" data-url-id="13290437">
-              <span class="align-middle">VISUALS</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-center" href="#" data-url-id="6974618">
-              <span class="align-middle">CONTACT</span>
-            </a>
-          </li>
-      </div>
-    </nav>
-
-    <nav class="navbar navbar-toggleable-sm navbar-expand-sm collapse navbar-collapse container-fluid navbar-desktop" id="th-navbar-collapse">
+    <nav class="navbar navbar-toggleable-sm navbar-expand-sm collapse navbar-collapse container-fluid hidden-sm-down navbar-desktop">
       <ul class="navbar-nav row mr-auto">
         <li class="header-image" class="col-1">
+          <a href="#" data-url-id="6959868">
+            <img src="{{ site.header_url }}">
+          </a>
+        </li>
+        <!--li class="header-image" class="col-1">
           {{#if_option "header_link_to_index"}} {{#if_any route.search route.is_set}}
           <a href="{{ site.direct_link }}">
             {{else}}
@@ -89,7 +48,7 @@
               {{/if_any}} {{/if_option}}
               <img src="{{ site.header_url }}" {{#if_option "header_link_to_index"}}>
             </a>{{/if_option}}
-        </li>
+        </li -->
         <li class="nav-item col-2">
           <a class="nav-link text-center" href="#" data-url-id="6958383">
             <span class="align-middle">ABOUT</span>
@@ -132,6 +91,59 @@
           </a>
         </li>
       </ul>
+    </nav>
+
+    <nav class="navbar navbar-toggleable-md navbar-light bg-faded hidden-md-up navbar-mobile">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+        aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="header-image">
+        <a class="navbar-brand" href="#" data-url-id="6959868">
+          <img src="{{ site.header_url }}">
+        </a>
+      </div>
+
+      <!--div class="header-image">
+        {{#if_option "header_link_to_index"}} {{#if_any route.search route.is_set}}
+        <a class="navbar-brand" href="{{ site.direct_link }}">
+          {{else}}
+          <a href="{{ site.direct_link }}" rel="show_index">
+            {{/if_any}} {{/if_option}}
+            <img src="{{ site.header_url }}" {{#if_option "header_link_to_index"}}>
+          </a>{{/if_option}}
+      </div-->
+    
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mr-auto mt-2 mt-md-0">
+          <li class="nav-item">
+            <a class="nav-link text-center" href="#" data-url-id="6958383">
+              <span class="align-middle">ABOUT</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="th-dropdown-btn nav-link text-center">
+              <span class="align-middle">PROJECTS</span>
+            </a>
+            <!--div class="th-dropdown-content" data-set="Projects">
+              {{#projects}}
+              <a class="th-dropdown-item" href="{{ url }}">{{ title }}</a>
+              {{/projects}}
+            </div -->
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-center" href="#" data-url-id="13290437">
+              <span class="align-middle">VISUALS</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-center" href="#" data-url-id="6974618">
+              <span class="align-middle">CONTACT</span>
+            </a>
+          </li>
+      </div>
+    </nav>
   </header>
 
   <!--div class="site_header">

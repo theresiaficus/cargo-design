@@ -13,7 +13,7 @@ $(function() {
   const doubleBorderWidth = 5;
   const homeHeight = windowHeight - headerHeight - footerHeight;
 
-  if (route === '') {
+  if (route === '' || route === 'Home') {
     home.show();
     home.imagesLoaded( { background: '.cover' }, function() {
       home.height(homeHeight);
@@ -27,10 +27,10 @@ $(function() {
   }
 
   /***Navigation Patches***/
-  $('.header-image').click(function(event) {
-    event.preventDefault();
-    window.location.reload();
-  });
+  // $('.header-image').click(function(event) {
+  //   event.preventDefault();
+  //   window.location.reload();
+  // });
   $('a[data-url-id]').click(function(event) {
     event.preventDefault();
     const id = $(this).data('url-id');

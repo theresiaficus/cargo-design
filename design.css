@@ -136,17 +136,6 @@ nav {
   padding-top: 0 !important;
   padding-bottom: 0 !important;
 }
-.navbar-mobile {
-  display: none;
-}
-@media (max-width: 575px) {
-  .navbar-mobile {
-    display: flex;
-  }
-  .navbar-desktop {
-    display: none;
-  }
-}
 .navbar-toggler-right {
   position: absolute;
   top: 1rem;
