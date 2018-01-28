@@ -117,7 +117,7 @@ customhtml {
 
 /*Little reset*/
 html, body {
-  height: auto !important;
+  height: 100% !important;
   font-family: lane;
 }
 
@@ -212,7 +212,7 @@ ul.navbar-nav {
   transition-delay: 0s, 0s, 0.3s;
 }
 
-/*Home Page*/
+/*Home Page for Desktop*/
 #home {
   position: absolute;
   width: 100%;
@@ -271,16 +271,25 @@ main {
 #home .cover:nth-child(4) h2 {
   color: #CFDE74;
 }
+/*Home Page for Mobile*/
+#home-mobile {
+ height: 100%;
+}
+.home-mobile-container {
+  height: 100%;
+  padding-top: calc(var(--header-height) + var(--double-border-width) + 20px);
+  background-image: url("{{#asset}}_05-sketch-mobile.jpg{{/asset}}");
+}
 
 /*Content*/
+.project_content {
+  margin-bottom: var(--footer-height);
+}
 .project_content br {
   display: none !important;
 }
 .project_content ul {
   margin-bottom: 0 !important;
-}
-.container.th-content {
-  margin-top: 20px;
 }
 .th-project-main {
   margin-top: 15px;
@@ -292,8 +301,8 @@ main {
 .th-project-sub-info {
   margin-top: 15px;
 }
-.project_content {
-  margin-bottom: var(--footer-height);
+.container.th-content {
+  padding-top: calc(var(--header-height) + var(--double-border-width) + 20px);
 }
 .container.th-content blockquote {
   margin-bottom: 0;

@@ -26,12 +26,6 @@
 </head>
 
 <body data-bodyview="{{ route.body_view }}">
-
-  {{!site.custom_html }} {{! The global loading indicator }}
-  <div class="loading" data-loading="page">
-    {{>loading_animation}}
-  </div>
-
   <header class="site_header bg-header-footer">
     <nav class="navbar navbar-toggleable-sm navbar-expand-sm collapse navbar-collapse container-fluid hidden-sm-down navbar-desktop">
       <ul class="navbar-nav row mr-auto">
@@ -40,15 +34,6 @@
             <img src="{{ site.header_url }}">
           </a>
         </li>
-        <!--li class="header-image" class="col-1">
-          {{#if_option "header_link_to_index"}} {{#if_any route.search route.is_set}}
-          <a href="{{ site.direct_link }}">
-            {{else}}
-            <a href="{{ site.direct_link }}" rel="show_index">
-              {{/if_any}} {{/if_option}}
-              <img src="{{ site.header_url }}" {{#if_option "header_link_to_index"}}>
-            </a>{{/if_option}}
-        </li -->
         <li class="nav-item col-2">
           <a class="nav-link text-center" href="#" data-url-id="6958383">
             <span class="align-middle">ABOUT</span>
@@ -104,16 +89,6 @@
           <img src="{{ site.header_url }}">
         </a>
       </div>
-
-      <!--div class="header-image">
-        {{#if_option "header_link_to_index"}} {{#if_any route.search route.is_set}}
-        <a class="navbar-brand" href="{{ site.direct_link }}">
-          {{else}}
-          <a href="{{ site.direct_link }}" rel="show_index">
-            {{/if_any}} {{/if_option}}
-            <img src="{{ site.header_url }}" {{#if_option "header_link_to_index"}}>
-          </a>{{/if_option}}
-      </div-->
     
       <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
         <ul class="navbar-nav mr-auto mt-2 mt-md-0">
@@ -126,11 +101,6 @@
             <a class="th-dropdown-btn nav-link text-center">
               <span class="align-middle">PROJECTS</span>
             </a>
-            <!--div class="th-dropdown-content" data-set="Projects">
-              {{#projects}}
-              <a class="th-dropdown-item" href="{{ url }}">{{ title }}</a>
-              {{/projects}}
-            </div -->
           </li>
           <li class="nav-item">
             <a class="nav-link text-center" href="#" data-url-id="13290437">
@@ -146,81 +116,7 @@
     </nav>
   </header>
 
-  <!--div class="site_header">
-
-      {{#if site.header_url}}
-      <div class="header_image">
-
-        {{#if_option "header_link_to_index"}}
-          {{#if_any route.search route.is_set}}
-            <a href="{{ site.direct_link }}">
-          {{else}}
-            <a href="{{ site.direct_link }}" rel="show_index">
-          {{/if_any}}
-        {{/if_option}}
-          <img src="{{ site.header_url }}" {{#if display_options.header_2x}} height="{{ site.header_height_2x }}" width="{{ site.header_width_2x }}" {{else}} height="{{ site.header_height }}" width="{{ site.header_width }}" {{/if}} />
-        {{#if_option "header_link_to_index"}}</a>{{/if_option}}
-
-      </div>
-      {{/if}}
-
-      <div class="header_text">
-        <a href="{{ site.direct_link }}" {{#if_any route.search route.is_set}}{{else}}rel="show_index"{{/if_any}}>
-          {{{ site.header_text }}}
-        </a>
-      </div>
-
-    </div-->
-
-  <!--
-  {{#unless route.search}} {{! Navigation }}
-  <div class="navigation">
-
-    {{#if site.filter}}
-    <div class="filter">Filter:
-      <b>{{ site.filter }}</b>
-      <a class="view_all" href="{{ site.direct_link }}">view all</a>
-    </div>
-    {{/if}}
-    <div id="autopagination_wrapper">
-      <ul class="list" data-view="Navigation" data-set="Navigation">
-        {{#navigation}} {{#if_all ../display_options.use_sets set_start}}
-        <li id="menu_{{ set_id }}" class="set_link {{#if_any " display_options.sets_open_by_default " "route.is_set
-          "}}open{{else}}closed{{/if_any}} {{#if_option "sets_can_toggle "}}toggle{{/if_option}}">
-          {{#if_option "sets_can_toggle"}}
-          <a id="p{{ set_id }}" class="set_name" data-id="{{ set_id }}" href="{{#if_option " use_set_link
-            "}}{{ set_url }}{{else}}#{{/if_option}}">{{ set_name }}</a>
-          {{else}}
-          <span class="set_name">{{ set_name }}</span>
-          {{/if_option}}
-          <ul class="set_wrapper" id="set_{{ set_id }}" data-setid="{{ set_id }}">
-            {{/if_all}}
-
-            <li id="menu_{{ id }}" class="{{ type }}_link" data-id="{{ id }}">
-              <a id="p{{ id }}" {{#if is_set }}class="set_name" {{/if}} {{#if link_url }}target="{{ link_target }}" href="{{ link_url }}"
-                {{else}} href="{{ url }}" {{#unless is_set}}rel="history" {{/unless}}{{/if}}>
-                {{ title_no_html }}
-              </a>
-            </li>
-
-            {{#if_all ../display_options.use_sets set_end}}
-          </ul>
-        </li>
-        {{/if_all}} {{/navigation}}
-      </ul>
-    </div>
-
-    {{#if_option "following_link_in_nav"}}
-    <div class="following">
-      <a href="{{ site.following_url }}">Following</a> ({{ site.following_count }})
-    </div>
-    {{/if_option}}
-
-  </div>
-
-  {{/unless}} {{#route index "/"}}
-  -->
-  <div id="home">
+  <div id="home" style="display: none;">
     <main>
       <section class="cover" id="cover1">
         <a href="#" data-url-id="6958383"><h2 data-0="opacity: 1; -webkit-transform: scale(0.8,0.8);" data-_step50="opacity: 0; -webkit-transform: scale(1.4,1.4);" class="text-right">Theresia Anna Ficus<br><small>Production Designer</small></h2></a>
@@ -237,151 +133,22 @@
     </main>
   </div>
 
-    <div id="project" class="project clear" data-view="ProjectDetail" data-set="Project" {{#if site.start_project_id}} style="display:block;" {{/if}}>
-      {{!-- <div-- class="entry" data-id="{{ project.id }}">
-        {{#if_option "title_in_project"}} {{#if project.show_title }}
-        <div class="project_title">{{{ project.title }}}</div>
-        {{/if}} {{/if_option}} --}}
-
-        <!--div class="project_navigation {{ project.type }}">
-          <a href="#" rel="prev_project">
-            <img src="{{#asset}}arrow-up.svg{{/asset}}">
-          </a>
-          <a href="#" rel="show_index">
-            <img src="{{#asset}}index.svg{{/asset}}">
-          </a>
-          <a href="#" rel="next_project">
-            <img src="{{#asset}}arrow-down.svg{{/asset}}">
-          </a>
-        </div-->
-
-        {{#if project.content}}
-        <div class="project_content">
-          <div class="container th-content">{{print "project.content"}}</div>
-        </div>
-        {{/if}}
-
-        <!--directlink link="{{ project.direct_link }}" id="dl_{{ project.id }}"></directlink>
-      </div-->
-
-      <!--div class="project_footer">
-        {{#if project.date}}
-        <span class="date">
-          {{ project.date }}
-        </span>
-        {{/if}} {{#if_option "view_count_in_project"}}
-        <span class="views">({{ project.views }} views)</span>
-        {{/if_option}} {{#if project.tags}}
-        <span class="tags">Filed under {{#project.tags}}
-          <span>
-            <a href="{{ filter_link }}">{{ tag }}</a>
-          </span> {{/project.tags}}</span>
-        {{/if}} {{#if site.is_editor}}
-        <span class="editlink">
-          <a href="{{ site.direct_link }}/admin/{{ project.id }}" target="_top">Edit</a>
-        </span>
-        {{/if}}
-      </div-->
-    </div>
-  
-  <!--div id="thumbnails" class="thumbnails clear" data-view="Thumbnail" data-set="Projects">
-
-      {{#projects}} {{#if_option "use_sets"}} {{#if set_start }}
-      <div class="set_thumbs_wrapper" data-setid="{{ set_id }}">
-        <div class="set_title_thumbnails">{{ set_name }}</div>
-        {{/if}} {{/if_option}}
-
-        <div class="project_thumb{{#unless_option " title_in_thumb "}} no_title{{/unless_option}}{{#unless_option "tags_in_thumb
-          "}} no_tags{{/unless_option}}" id="item_{{ id }}" data-id="{{ id }}" style="max-width: {{ thumb_width }}px">
-
-          <div class="loading" data-loading="{{ id }}">
-            {{>loading_animation}}
-          </div>
-
-          <a href="{{ url }}" data-id="{{ id }}" rel="history">
-
-            <div class="thumb_image" name="">
-              <img src="{{print " thumb_url "}}" width="{{ thumb_width }}" height="{{ thumb_height }}" {{#if thumb_url_2x}} data-hi-res={{
-                thumb_url_2x }} {{/if}}>
-            </div>
-
-            {{#if_option "title_in_thumb"}}
-            <div class="thumb_title">
-              <span>{{{ title }}}</span>
-            </div>
-            {{/if_option}}
-
-          </a>
-
-          {{#if_option "tags_in_thumb"}}
-          <div class="thumb_tags">
-            {{#tags}}
-            <span class="thumb_tag">
-              <span>
-                <a href="{{ filter_link }}">{{ tag }}</a>
-              </span>
-            </span>
-            {{/tags}}
-          </div>
-          {{/if_option}}
-
-        </div>
-        {{#if_option "use_sets"}} {{#if set_end }}
+  <div id="home-mobile" style="display: none;">
+    <div class="container home-mobile-container">
+      <div class="row">
+        <h2 style="color: red; font-weight: bold;">Theresia Anna Ficus</h2>
+        <h3>Production Designer</h3>
       </div>
-      {{/if}} {{/if_option}} {{/projects}}
-
-    </div>
-
-    {{#unless route.is_set}} {{#if_option "thumbs_below_projects"}}
-    <div class="set_footer">
-      <a href="{{ site.direct_link }}" class="show_index" onclick="window.scrollTo(0,0);" rel="show_index">View all</a>
-    </div>
-    {{/if_option}} {{/unless}}
-
-    <div id="autopaginate_loader" class="moreload" data-view="Autopaginate" data-preload_distance="500">
-      {{> loading_animation}}
-    </div>
-  </div-->
-
-  <!--
-  {{/route}} {{#route search "/search"}}
-
-  <div class="container search">
-    <div id="search" class="search" data-view="Search">
-      <div action="#" class="search_form_results" id="search_form_results">
-        <div class="search_header">Search results for </div>
-        <input type="text" value="{{ search.term }}" id="results_search_term">
-      </div>
-      {{#search}} {{#projects}}
-      <div class="result">
-        <div class="search_thumb">
-          <a href="{{ direct_link }}">
-            <img border="0" align="left" src="{{ thumb_url }}">
-          </a>
-        </div>
-        <div class="search_text">
-          <div class="search_title">
-            <a href="{{ direct_link }}">{{{ title }}}</a>
-          </div>
-          <div class="search_body">
-            {{ excerpt }}
-          </div>
-          <div class="search_tags">
-            {{#tags}}
-            <span class="thumb_tag">
-              <a href="{{ filter_link }}">{{ tag }}</a>
-            </span>
-            {{/tags}}
-          </div>
-        </div>
-      </div>
-      {{/projects}} {{/search}}
-    </div>
-
+    </div> 
   </div>
 
-  {{/route}}
-  -->
+  <div id="project" class="project clear" data-view="ProjectDetail" data-set="Project" {{#if site.start_project_id}} style="display:block;" {{/if}}>
+    {{#if project.content}}
+    <div class="project_content">
+      <div class="container th-content">{{print "project.content"}}</div>
+    </div>
+    {{/if}}
+  </div>
 
   <footer class="container-fluid">
     <div class="row">
