@@ -119,6 +119,7 @@ customhtml {
 html, body {
   height: 100% !important;
   font-family: lane;
+  overflow: auto !important;
 }
 
 a {
@@ -326,6 +327,17 @@ main {
 .container.th-content .th-project-images img {
   margin-top: 20px;
   margin-bottom: 20px;
+}
+.th-project-links {
+  margin-top: 20px;
+}
+.th-project-links h4 {
+  margin: 0;
+  padding: 4px 0;
+  border-top: 1px solid grey;
+}
+.th-project-links h4.last-title {
+  border-bottom: 1px solid grey;
 }
 
 /*Footer*/

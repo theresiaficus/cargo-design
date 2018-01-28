@@ -56,7 +56,11 @@ $(function() {
       location.href = Cargo.Helper.GetPurlFromPid(id);
     } else {
       const pageUrl = Cargo.Collection.Pages._byId[id.toString()].attributes.project_url;
-      location.href = pageUrl;
+      if (!isMobile() && id === 13353172) {
+        return false;
+      } else {
+        location.href = pageUrl;
+      }
     }
   });
   $('.th-project-images img').addClass('img-thumbnail img-fluid');
