@@ -121,6 +121,10 @@ html, body {
   font-family: lane;
 }
 
+a {
+  color: initial !important;
+}
+
 /*Header*/
 header {
   position: fixed !important;
@@ -284,6 +288,9 @@ main {
 .th-project-thumb img {
   width: 100% !important;
   height: auto !important;
+}
+.th-project-sub-info {
+  margin-top: 15px;
 }
 .project_content {
   margin-bottom: var(--footer-height);
