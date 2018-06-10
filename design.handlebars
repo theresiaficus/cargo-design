@@ -89,7 +89,7 @@
           <img src="{{ site.header_url }}">
         </a>
       </div>
-    
+
       <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
         <ul class="navbar-nav mr-auto mt-2 mt-md-0">
           <li class="nav-item">
@@ -119,16 +119,33 @@
   <div id="home" style="display: none;">
     <main>
       <section class="cover" id="cover1">
-        <a href="#" data-url-id="6958383"><h2 data-0="opacity: 1; -webkit-transform: scale(0.8,0.8);" data-_step50="opacity: 0; -webkit-transform: scale(1.4,1.4);" class="text-right">Theresia Anna Ficus<br><small>Production Designer</small></h2></a>
+        <a href="#" data-url-id="6958383">
+          <h2 data-0="opacity: 1; -webkit-transform: scale(0.8,0.8);" data-_step50="opacity: 0; -webkit-transform: scale(1.4,1.4);"
+            class="text-right">Theresia Anna Ficus
+            <br>
+            <small>Production Designer</small>
+          </h2>
+        </a>
       </section>
       <section class="cover" id="cover2">
-        <a href="#" data-url-id="12459458"><h2 data-_step50="opacity: 0; -webkit-transform: scale(0.8,0.8);" data-_step65="opacity: 1; -webkit-transform: scale(1,1);" data-_step100="opacity: 1; -webkit-transform: scale(1.2,1.2);" data-_step150="opacity: 0; -webkit-transform: scale(1.4,1.4);">Werk ohne Autor</h2></a >
+        <a href="#" data-url-id="12459458">
+          <h2 data-_step50="opacity: 0; -webkit-transform: scale(0.8,0.8);" data-_step65="opacity: 1; -webkit-transform: scale(1,1);"
+            data-_step100="opacity: 1; -webkit-transform: scale(1.2,1.2);" data-_step150="opacity: 0; -webkit-transform: scale(1.4,1.4);">Werk ohne Autor</h2>
+        </a>
       </section>
       <section class="cover" id="cover3">
-        <a href="#" data-url-id="12926947"><h2 data-_step150="opacity: 0; -webkit-transform: scale(0.8,0.8);" data-_step165="opacity: 1; -webkit-transform: scale(1,1);" data-_step200="opacity: 1; -webkit-transform: scale(1.2,1.2);" data-_step250="opacity: 0; -webkit-transform: scale(1.4,1.4);">Tatort<br><small>Murot und das Murmeltier</small></h2></a >
+        <a href="#" data-url-id="12926947">
+          <h2 data-_step150="opacity: 0; -webkit-transform: scale(0.8,0.8);" data-_step165="opacity: 1; -webkit-transform: scale(1,1);"
+            data-_step200="opacity: 1; -webkit-transform: scale(1.2,1.2);" data-_step250="opacity: 0; -webkit-transform: scale(1.4,1.4);">Tatort
+            <br>
+            <small>Murot und das Murmeltier</small>
+          </h2>
+        </a>
       </section>
       <section class="cover" id="cover4">
-        <a href="#" data-url-id="10401494"><h2 data-_step250="opacity: 0; -webkit-transform: scale(0.8,0.8);" data-_step300="opacity: 1; -webkit-transform: scale(1.1,1.1);">Goster</h2></a >
+        <a href="#" data-url-id="10401494">
+          <h2 data-_step250="opacity: 0; -webkit-transform: scale(0.8,0.8);" data-_step300="opacity: 1; -webkit-transform: scale(1.1,1.1);">Goster</h2>
+        </a>
       </section>
     </main>
   </div>
@@ -139,10 +156,11 @@
         <h2 style="color: red; font-weight: bold;">Theresia Anna Ficus</h2>
         <h3>Production Designer</h3>
       </div>
-    </div> 
+    </div>
   </div>
 
-  <div id="project" class="project clear" data-view="ProjectDetail" data-set="Project" {{#if site.start_project_id}} style="display:block;" {{/if}}>
+  <div id="project" class="project clear" data-view="ProjectDetail" data-set="Project" {{#if site.start_project_id}} style="display:block;"
+    {{/if}}>
     {{#if project.content}}
     <div class="project_content">
       <div class="container th-content">{{print "project.content"}}</div>
@@ -182,7 +200,7 @@
 
     var s = skrollr.init({
       // forceHeight: false,
-      constants: {step50, step65, step100, step150, step165, step200, step250, step300},
+      constants: { step50, step65, step100, step150, step165, step200, step250, step300 },
     });
     s.refresh($('.cover'));
   </script>
