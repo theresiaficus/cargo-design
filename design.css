@@ -232,7 +232,7 @@ main {
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position-y: calc(var(--header-height) + var(--double-border-width));
-  will-change: transform;
+  will-change: opacity;
 }
 #cover1 {
   background-image: url("{{#asset}}_01-moi-min.jpg{{/asset}}");
