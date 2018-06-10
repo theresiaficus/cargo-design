@@ -182,27 +182,29 @@
   <script src="{{#asset}}bootstrap4alpha6.min.js{{/asset}}" type="text/javascript"></script>
   <script src="{{#asset}}skrollr.min.js{{/asset}}" type="text/javascript"></script>
   <script type="text/javascript">
-    const windowHeight = $(window).outerHeight(true);
-    const headerHeight = $('header').outerHeight(true);
-    const footerHeight = $('footer').outerHeight(true);
-    const homeHeight = windowHeight - headerHeight - footerHeight;
-    const homeHeight50p = homeHeight / 2;
-    const homeHeight25p = homeHeight / 4;
-    const homeHeight15p = (homeHeight / 20) * 3;
-    const step50 = homeHeight50p;
-    const step65 = homeHeight50p + homeHeight15p;
-    const step100 = homeHeight;
-    const step150 = homeHeight + homeHeight50p;
-    const step165 = step150 + homeHeight15p;
-    const step200 = homeHeight * 2;
-    const step250 = step200 + homeHeight50p;
-    const step300 = homeHeight * 3;
+    if (!isMobile()) {
+      const windowHeight = $(window).outerHeight(true);
+      const headerHeight = $('header').outerHeight(true);
+      const footerHeight = $('footer').outerHeight(true);
+      const homeHeight = windowHeight - headerHeight - footerHeight;
+      const homeHeight50p = homeHeight / 2;
+      const homeHeight25p = homeHeight / 4;
+      const homeHeight15p = (homeHeight / 20) * 3;
+      const step50 = homeHeight50p;
+      const step65 = homeHeight50p + homeHeight15p;
+      const step100 = homeHeight;
+      const step150 = homeHeight + homeHeight50p;
+      const step165 = step150 + homeHeight15p;
+      const step200 = homeHeight * 2;
+      const step250 = step200 + homeHeight50p;
+      const step300 = homeHeight * 3;
 
-    var s = skrollr.init({
-      // forceHeight: false,
-      constants: { step50, step65, step100, step150, step165, step200, step250, step300 },
-    });
-    s.refresh($('.cover'));
+      var s = skrollr.init({
+        // forceHeight: false,
+        constants: { step50, step65, step100, step150, step165, step200, step250, step300 },
+      });
+      s.refresh($('.cover'));
+    }
   </script>
 </body>
 

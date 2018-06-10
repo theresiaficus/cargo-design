@@ -27,6 +27,8 @@ $(function() {
   // console.log(route);
 
   /***Home functionality***/
+  const html = $('html');
+  const body = $('body');
   const home = $('#home');
   const homeMobile = $('#home-mobile');
   const header = $('header');

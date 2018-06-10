@@ -119,7 +119,8 @@ customhtml {
 html, body {
   height: 100% !important;
   font-family: lane;
-  overflow: auto !important;
+  overflow-y: scroll; /* For mobile devices has to be scroll, not auto */
+  -webkit-overflow-scrolling: touch; /* For iOS momentum scrolling */
 }
 
 a {
