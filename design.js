@@ -20,6 +20,7 @@ $(function() {
   if (route === '' || route === 'Home') {
     project.hide();
     if (!isMobile()) {
+      alert('Welcome');
       const windowHeight = $(window).outerHeight(true);
       const headerHeight = $('header').outerHeight(true);
       const footerHeight = $('footer').outerHeight(true );
